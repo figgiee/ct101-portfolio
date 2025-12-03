@@ -1,0 +1,412 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-label">CT-101: Persuasion and Resistance</span>
+      <h1>Manufactured Judgment</h1>
+      <p class="hero-subtitle">How visual rhetoric, psychological archetypes, and algorithmic systems shape perception and behavior</p>
+    </div>
+    <div class="hero-visual">
+      <div class="orbit-container">
+        <div class="orbit-ring"></div>
+        <div class="orbit-item item-1" title="Visual Rhetoric">
+          <span>Visual Rhetoric</span>
+        </div>
+        <div class="orbit-item item-2" title="Psychological Archetypes">
+          <span>Archetypes</span>
+        </div>
+        <div class="orbit-item item-3" title="Algorithmic Systems">
+          <span>Algorithms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bio section">
+    <div class="section-header">
+      <span class="section-label">About</span>
+      <h2>Brandon Figarella</h2>
+    </div>
+    <div class="bio-content">
+      <p>Brandon Figarella is a 3D generalist and musician working across digital mediums, specializing in technical implementation and environmental storytelling within interactive experiences. His practice blends game programming, 3D asset integration, and spatial audio to create immersive worlds that communicate narrative through space and atmosphere.</p>
+
+      <p>This portfolio emerges from CT-101: Persuasion and Resistance, a course examining how power flows through media systems. The work collected here investigates how visual rhetoric, psychological archetypes, and algorithmic systems manufacture judgment at scale. From Anne Lund's 1975 anti-nuclear iconography to modern matchmaking algorithms in competitive gaming, these projects trace a common pattern: designed systems that shape public perception and individual behavior in ways that resist correction by evidence alone.</p>
+
+      <p>As someone who builds interactive systems professionally, Brandon approaches these questions from inside the machinery. Understanding how game algorithms manipulate player behavior, how visual symbols bypass rational analysis, and how platforms commodify identity is not abstract critique. It is knowledge that informs how he chooses to build, what systems he refuses to replicate, and what alternatives he might create.</p>
+    </div>
+  </section>
+
+  <section class="projects section">
+    <div class="section-header">
+      <span class="section-label">Portfolio</span>
+      <h2>Three Studies in Manufactured Judgment</h2>
+    </div>
+
+    <div class="project-grid">
+      <a href="/ct101-portfolio/depth-study/" class="project-card depth-study">
+        <div class="project-number">01</div>
+        <h3>Depth Study</h3>
+        <p class="project-title">Anne Lund vs. Generation Atomic</p>
+        <p class="project-desc">How visual rhetoric overpowered scientific data in shaping American nuclear policy</p>
+        <div class="project-tags">
+          <span>Visual Rhetoric</span>
+          <span>Policy</span>
+          <span>Fear</span>
+        </div>
+      </a>
+
+      <a href="/ct101-portfolio/persona/" class="project-card persona">
+        <div class="project-number">02</div>
+        <h3>Persona / Archetype</h3>
+        <p class="project-title">The Concerned Parent</p>
+        <p class="project-desc">A manufactured psychological archetype weaponizing maternal protective instinct</p>
+        <div class="project-tags">
+          <span>Psychology</span>
+          <span>Marketing</span>
+          <span>Identity</span>
+        </div>
+      </a>
+
+      <a href="/ct101-portfolio/embodiment/" class="project-card embodiment">
+        <div class="project-number">03</div>
+        <h3>Practice of Embodiment</h3>
+        <p class="project-title">The Noob</p>
+        <p class="project-desc">Defending the right to exist in algorithmically judged gaming spaces</p>
+        <div class="project-tags">
+          <span>Algorithms</span>
+          <span>Gaming</span>
+          <span>Resistance</span>
+        </div>
+        <div class="interactive-badge">Interactive</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="thread section">
+    <div class="section-header">
+      <span class="section-label">Conceptual Thread</span>
+      <h2>The Pattern</h2>
+    </div>
+    <div class="thread-content">
+      <div class="thread-item">
+        <div class="thread-icon">01</div>
+        <div class="thread-text">
+          <h4>Visual symbols bypass rational analysis</h4>
+          <p>Anne Lund's Smiling Sun reduced complex nuclear risk assessment to intuitive moral certainty. Once embedded, visual associations resist correction by evidence.</p>
+        </div>
+      </div>
+      <div class="thread-connector"></div>
+      <div class="thread-item">
+        <div class="thread-icon">02</div>
+        <div class="thread-text">
+          <h4>Psychology-based techniques manufacture consent</h4>
+          <p>The Concerned Parent archetype exploits loss aversion, social proof, and in-group identity formation. These market research methods target emotional vulnerabilities at scale.</p>
+        </div>
+      </div>
+      <div class="thread-connector"></div>
+      <div class="thread-item">
+        <div class="thread-icon">03</div>
+        <div class="thread-text">
+          <h4>Algorithmic systems automate judgment</h4>
+          <p>Gaming matchmaking previews what is coming everywhere. Credit scores, driver ratings, follower counts. Bodies become data points in systems that manufacture hierarchy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .hero-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-accent-soft);
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 500px;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .orbit-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbit-ring {
+    position: absolute;
+    inset: 0;
+    border: 1px dashed var(--color-text-muted);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: spin 30s linear infinite;
+  }
+
+  .orbit-item {
+    position: absolute;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .item-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0s;
+  }
+
+  .item-2 {
+    bottom: 15%;
+    left: 0;
+    animation-delay: 1.3s;
+  }
+
+  .item-3 {
+    bottom: 15%;
+    right: 0;
+    animation-delay: 2.6s;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .item-1 {
+    animation: float1 4s ease-in-out infinite;
+  }
+
+  @keyframes float1 {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+  }
+
+  /* Bio */
+  .bio-content {
+    max-width: 800px;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+
+  .bio-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    position: relative;
+    display: block;
+    background: var(--color-bg-secondary);
+    border: 1px solid #ffffff10;
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+  }
+
+  .project-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .project-card.depth-study:hover { --color-accent: var(--color-nuclear-yellow); }
+  .project-card.persona:hover { --color-accent: var(--color-danger); }
+  .project-card.embodiment:hover { --color-accent: var(--color-resistance-green); }
+
+  .project-number {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem !important;
+  }
+
+  .project-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .project-tags span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 0.75rem;
+    background: #ffffff08;
+    border-radius: 4px;
+    color: var(--color-text-muted);
+  }
+
+  .interactive-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 0.75rem;
+    background: var(--color-resistance-green);
+    color: var(--color-bg);
+    border-radius: 4px;
+  }
+
+  /* Thread */
+  .thread-content {
+    max-width: 700px;
+  }
+
+  .thread-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .thread-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent-soft);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+  }
+
+  .thread-text h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .thread-text p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  .thread-connector {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--color-accent), transparent);
+    margin-left: 23px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+      min-height: auto;
+      padding-top: 2rem;
+    }
+
+    .hero-subtitle {
+      margin: 0 auto;
+    }
+
+    .hero-visual {
+      order: -1;
+    }
+
+    .orbit-container {
+      width: 250px;
+      height: 250px;
+    }
+  }
+</style>

@@ -1,0 +1,959 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Practice of Embodiment" description="The Noob: Defending the Right to Exist in Algorithmically Judged Spaces">
+  <article class="study">
+    <header class="study-header">
+      <span class="section-label">03 / Practice of Embodiment</span>
+      <h1>The Noob</h1>
+      <p class="study-subtitle">Defending the Right to Exist in Algorithmically Judged Spaces</p>
+      <div class="interactive-notice">
+        <span class="notice-badge">Interactive</span>
+        <span class="notice-text">Navigate the flowchart below to explore resistance tactics</span>
+      </div>
+    </header>
+
+    <section class="statement-section">
+      <div class="statement-intro">
+        <p>Angela Washko entered World of Warcraft to challenge toxic masculinity from within the game world. I position myself similarly as "the noob" in competitive gaming spaces, but my resistance targets the algorithmic systems that manufacture hierarchy rather than just the players who enforce it.</p>
+      </div>
+
+      <div class="context-cards">
+        <div class="context-card">
+          <h4>MMR (Matchmaking Rating)</h4>
+          <p>In games like League of Legends and Dota 2, algorithms measure my skill and assign me a number that determines my social status. This rating acts like a social class marker.</p>
+        </div>
+        <div class="context-card">
+          <h4>Cosmetic Judgment</h4>
+          <p>In Team Fortress 2, my avatar's appearance matters. When I wear free default items instead of purchased "skins" or "hats," other players judge me before I start playing.</p>
+        </div>
+        <div class="context-card">
+          <h4>Algorithmic Manipulation</h4>
+          <p>Systems manipulate team composition to keep players engaged. High-performers get paired with lower-skilled players to create frustration that keeps both coming back.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="flowchart-section">
+      <h2>Resistance Tactics Flowchart</h2>
+      <p class="flowchart-intro">This interactive flowchart maps strategies for navigating algorithmically judged gaming spaces. Click through to explore different scenarios and resistance tactics.</p>
+
+      <div class="flowchart-container" id="flowchart">
+        <!-- Start State -->
+        <div class="flow-node start active" id="start">
+          <div class="node-content">
+            <div class="node-label">START</div>
+            <h3>Playing online competitive game</h3>
+          </div>
+        </div>
+
+        <!-- Question 1: Harassment happening? -->
+        <div class="flow-node question hidden" id="q1">
+          <div class="node-content">
+            <h3>Is harassment or judgment happening?</h3>
+            <div class="choice-buttons">
+              <button class="choice-btn" data-target="continue">No</button>
+              <button class="choice-btn" data-target="q2">Yes</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2: Who is targeted? (NEW - addresses TA feedback) -->
+        <div class="flow-node question hidden" id="q2">
+          <div class="node-content">
+            <h3>Who is being targeted?</h3>
+            <div class="choice-buttons">
+              <button class="choice-btn" data-target="q3">Me</button>
+              <button class="choice-btn" data-target="intervention">Another player</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3: What is judging me? -->
+        <div class="flow-node question hidden" id="q3">
+          <div class="node-content">
+            <h3>What is judging me?</h3>
+            <div class="choice-buttons vertical">
+              <button class="choice-btn" data-target="refusal">
+                <strong>My appearance</strong>
+                <span>No purchased skins/cosmetics = seen as "poor" or "noob"</span>
+              </button>
+              <button class="choice-btn" data-target="withdrawal">
+                <strong>My skill level</strong>
+                <span>Teammates blame me for losses or mistakes</span>
+              </button>
+              <button class="choice-btn" data-target="obfuscation">
+                <strong>My rank number</strong>
+                <span>The system's rating makes me feel worthless</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tactic: Refusal -->
+        <div class="flow-node tactic hidden" id="refusal">
+          <div class="node-content">
+            <div class="tactic-header refusal-color">
+              <span class="tactic-label">TACTIC</span>
+              <h3>Refusal</h3>
+            </div>
+            <div class="tactic-body">
+              <h4>What I do:</h4>
+              <ul>
+                <li>Keep wearing free/default items</li>
+                <li>Do not buy cosmetics for status</li>
+                <li>Tell myself: "How I look ≠ my worth"</li>
+              </ul>
+              <h4>Why:</h4>
+              <p>Reject the idea that spending money makes me a valid player. The platform profits by selling status symbols while using non-paying players as a visible lower class.</p>
+            </div>
+            <button class="restart-btn" data-target="start">Start Over</button>
+          </div>
+        </div>
+
+        <!-- Tactic: Withdrawal -->
+        <div class="flow-node tactic hidden" id="withdrawal">
+          <div class="node-content">
+            <div class="tactic-header withdrawal-color">
+              <span class="tactic-label">TACTIC</span>
+              <h3>Withdrawal</h3>
+            </div>
+            <div class="tactic-body">
+              <h4>What I do:</h4>
+              <ul>
+                <li>Mute all other players</li>
+                <li>Leave ranked competitive modes</li>
+                <li>Play casual modes or with friends</li>
+              </ul>
+              <h4>Why:</h4>
+              <p>Remove myself from hostile environment. When skilled teammates harass me for mistakes, they think they are enforcing fair competition. They are actually enforcing the system's strategy.</p>
+            </div>
+            <button class="restart-btn" data-target="start">Start Over</button>
+          </div>
+        </div>
+
+        <!-- Tactic: Obfuscation -->
+        <div class="flow-node tactic hidden" id="obfuscation">
+          <div class="node-content">
+            <div class="tactic-header obfuscation-color">
+              <span class="tactic-label">TACTIC</span>
+              <h3>Obfuscation</h3>
+            </div>
+            <div class="tactic-body">
+              <h4>What I do:</h4>
+              <ul>
+                <li>Turn off rank display in settings</li>
+                <li>Play unranked matches only</li>
+                <li>Play inconsistently so algorithm cannot categorize me</li>
+              </ul>
+              <h4>Why:</h4>
+              <p>Hide from or confuse the judgment system. My physical body's reflexes become data points in an algorithm. By refusing to be measured accurately, I reclaim some autonomy.</p>
+            </div>
+            <button class="restart-btn" data-target="start">Start Over</button>
+          </div>
+        </div>
+
+        <!-- NEW: Intervention (Bystander path - addresses TA feedback) -->
+        <div class="flow-node tactic hidden" id="intervention">
+          <div class="node-content">
+            <div class="tactic-header intervention-color">
+              <span class="tactic-label">TACTIC</span>
+              <h3>Intervention</h3>
+            </div>
+            <div class="tactic-body">
+              <h4>What I can do:</h4>
+              <ul>
+                <li>Speak up in chat to defend the targeted player</li>
+                <li>Report the harassing player</li>
+                <li>Invite the targeted player to party/group for safety</li>
+                <li>Model different behavior by treating them as a teammate</li>
+              </ul>
+              <h4>Why this matters:</h4>
+              <p>Angela Washko did not hide in World of Warcraft. She made herself visible as someone who cared. Intervention is risky—it marks you as a target too. But silence reinforces the system.</p>
+              <div class="washko-note">
+                <h5>The Washko Connection</h5>
+                <p>When we intervene, we challenge the assumed "default" player identity. Games are marketed to assumed demographics. Speaking up makes visible that the community is broader than the algorithm assumes.</p>
+              </div>
+            </div>
+            <button class="restart-btn" data-target="start">Start Over</button>
+          </div>
+        </div>
+
+        <!-- Continue playing -->
+        <div class="flow-node outcome hidden" id="continue">
+          <div class="node-content">
+            <div class="outcome-header">
+              <h3>Continue Playing</h3>
+            </div>
+            <p>No harassment detected. Enjoy the game.</p>
+            <p class="outcome-note">But stay aware. The systems that manufacture judgment are always running in the background. Your skill is being measured. Your appearance is being read. The algorithm is learning.</p>
+            <button class="restart-btn" data-target="start">Start Over</button>
+          </div>
+        </div>
+
+        <!-- End State -->
+        <div class="flow-node end hidden" id="end">
+          <div class="node-content">
+            <div class="node-label">END</div>
+            <h3>I maintained my right to exist</h3>
+            <p>Without accepting algorithmic or economic judgment as a measure of my worth.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress indicator -->
+      <div class="flow-progress">
+        <div class="progress-step active" data-step="start">Start</div>
+        <div class="progress-step" data-step="q1">Situation</div>
+        <div class="progress-step" data-step="q2">Target</div>
+        <div class="progress-step" data-step="tactic">Tactic</div>
+      </div>
+    </section>
+
+    <section class="identity-section">
+      <h2>Gendered & Racial Embodiment in Gaming</h2>
+
+      <div class="identity-content">
+        <p>Since I cite Angela Washko as inspiration, it is important to think about gendered and racial embodiment in gameplay—the tension between needing to hide your identity and what player identities are assumed or being marketed to.</p>
+
+        <div class="identity-grid">
+          <div class="identity-card">
+            <h4>The "Default" Player</h4>
+            <p>Games are marketed to assumed identities: white, male, English-speaking. Everyone else becomes visible by deviation. This is not neutral—it shapes who feels welcome and who must perform labor to exist.</p>
+          </div>
+          <div class="identity-card">
+            <h4>The Hiding Dilemma</h4>
+            <p>Women use voice changers. Players choose gender-neutral names. Non-English speakers avoid voice chat. Hiding provides safety but accepts that the "default" player is not you.</p>
+          </div>
+          <div class="identity-card">
+            <h4>Cultural Consequences</h4>
+            <p>When marginalized players hide, the visible community appears more homogeneous than it is. This reinforces marketing assumptions. The cycle perpetuates itself.</p>
+          </div>
+        </div>
+
+        <div class="reflection-box">
+          <p>My resistance tactics (withdrawal, obfuscation, refusal) assume a player who can retreat. But what about players whose identity is visible regardless of choice? The noob can hide their skill level. A player with a "foreign" name cannot hide their perceived ethnicity. A player with a feminine voice cannot always hide their gender.</p>
+          <p>This is why intervention matters. Those of us who can pass as "default" have responsibility to make space for those who cannot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="broader-section">
+      <h2>Beyond Gaming</h2>
+
+      <p>What I defend is not the right to win or look wealthy. I defend the right to exist in competitive gaming spaces while learning, to live digitally without numbers determining social worth, and to refuse systems that turn bodies into advertisements for economic status.</p>
+
+      <div class="beyond-grid">
+        <div class="beyond-item">
+          <div class="beyond-icon">⭐</div>
+          <h4>Ride-sharing Ratings</h4>
+          <p>Your behavior becomes a number that determines your access to transportation</p>
+        </div>
+        <div class="beyond-item">
+          <div class="beyond-icon">💳</div>
+          <h4>Credit Scores</h4>
+          <p>Your financial history becomes a number that determines your life options</p>
+        </div>
+        <div class="beyond-item">
+          <div class="beyond-icon">💼</div>
+          <h4>LinkedIn Metrics</h4>
+          <p>Your professional network becomes a number that determines your opportunities</p>
+        </div>
+        <div class="beyond-item">
+          <div class="beyond-icon">👥</div>
+          <h4>Follower Counts</h4>
+          <p>Your social reach becomes a number that determines your credibility</p>
+        </div>
+      </div>
+
+      <div class="conclusion-box">
+        <p><strong>Gaming is where body-judging systems get tested before spreading everywhere else.</strong></p>
+        <p>These systems preview what is coming. The tactics I develop in gaming spaces—withdrawal, obfuscation, refusal, intervention—are practice for navigating algorithmic judgment in every domain of life.</p>
+      </div>
+    </section>
+
+    <nav class="study-nav">
+      <a href="/ct101-portfolio/persona/" class="nav-prev">
+        <span class="nav-label">Previous</span>
+        <span class="nav-title">The Concerned Parent</span>
+      </a>
+      <a href="/ct101-portfolio/references/" class="nav-next">
+        <span class="nav-label">Next</span>
+        <span class="nav-title">References</span>
+      </a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .study {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .study-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ffffff10;
+  }
+
+  .study-header h1 {
+    margin: 1rem 0;
+  }
+
+  .study-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .interactive-notice {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--color-resistance-green)10;
+    border: 1px solid var(--color-resistance-green);
+    border-radius: 8px;
+  }
+
+  .notice-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 0.75rem;
+    background: var(--color-resistance-green);
+    color: var(--color-bg);
+    border-radius: 4px;
+  }
+
+  .notice-text {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Statement Section */
+  .statement-section {
+    margin-bottom: 4rem;
+  }
+
+  .statement-intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .context-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .context-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid #ffffff10;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .context-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-resistance-green);
+  }
+
+  .context-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Flowchart Section */
+  .flowchart-section {
+    margin: 4rem 0;
+  }
+
+  .flowchart-section h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-resistance-green);
+    display: inline-block;
+  }
+
+  .flowchart-intro {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  /* Flowchart Container */
+  .flowchart-container {
+    position: relative;
+    min-height: 400px;
+  }
+
+  .flow-node {
+    background: var(--color-bg-secondary);
+    border: 2px solid #ffffff10;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .flow-node.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .flow-node.hidden {
+    display: none;
+  }
+
+  .flow-node.start {
+    border-color: var(--color-resistance-green);
+    text-align: center;
+  }
+
+  .flow-node.question {
+    border-color: var(--color-nuclear-yellow);
+  }
+
+  .flow-node.tactic {
+    border-color: var(--color-accent);
+  }
+
+  .flow-node.outcome {
+    border-color: var(--color-text-muted);
+  }
+
+  .node-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-resistance-green);
+    margin-bottom: 0.5rem;
+  }
+
+  .node-content h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Choice Buttons */
+  .choice-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .choice-buttons.vertical {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .choice-btn {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+
+  .choice-btn:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  .choice-btn strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .choice-btn span {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+
+  /* Tactic Styles */
+  .tactic-header {
+    margin: -2rem -2rem 1.5rem -2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .tactic-header.refusal-color {
+    background: linear-gradient(135deg, #3b82f620, transparent);
+    border-bottom: 2px solid #3b82f6;
+  }
+
+  .tactic-header.withdrawal-color {
+    background: linear-gradient(135deg, #8b5cf620, transparent);
+    border-bottom: 2px solid #8b5cf6;
+  }
+
+  .tactic-header.obfuscation-color {
+    background: linear-gradient(135deg, #f59e0b20, transparent);
+    border-bottom: 2px solid #f59e0b;
+  }
+
+  .tactic-header.intervention-color {
+    background: linear-gradient(135deg, var(--color-resistance-green)20, transparent);
+    border-bottom: 2px solid var(--color-resistance-green);
+  }
+
+  .tactic-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+  }
+
+  .tactic-header h3 {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .tactic-body h4 {
+    font-size: 0.9rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text);
+  }
+
+  .tactic-body ul {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  .tactic-body li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  .tactic-body li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .tactic-body > p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .washko-note {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--color-resistance-green)10;
+    border-left: 3px solid var(--color-resistance-green);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .washko-note h5 {
+    font-size: 0.85rem;
+    color: var(--color-resistance-green);
+    margin-bottom: 0.5rem;
+  }
+
+  .washko-note p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .restart-btn {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--color-text-muted);
+    border-radius: 6px;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .restart-btn:hover {
+    border-color: var(--color-text);
+    color: var(--color-text);
+  }
+
+  /* Outcome */
+  .outcome-header h3 {
+    margin-bottom: 1rem;
+  }
+
+  .outcome-note {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  /* Progress */
+  .flow-progress {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ffffff10;
+  }
+
+  .progress-step {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .progress-step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--color-text-muted);
+    background: transparent;
+  }
+
+  .progress-step.active::before {
+    background: var(--color-resistance-green);
+    border-color: var(--color-resistance-green);
+  }
+
+  .progress-step.completed::before {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  /* Identity Section */
+  .identity-section {
+    margin: 4rem 0;
+  }
+
+  .identity-section h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+  }
+
+  .identity-content > p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .identity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .identity-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid #ffffff10;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .identity-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .identity-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .reflection-box {
+    background: var(--color-bg-secondary);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 12px 12px 0;
+    padding: 2rem;
+  }
+
+  .reflection-box p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .reflection-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Broader Section */
+  .broader-section {
+    margin: 4rem 0;
+  }
+
+  .broader-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .broader-section > p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .beyond-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .beyond-item {
+    background: var(--color-bg-secondary);
+    border: 1px solid #ffffff10;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .beyond-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .beyond-item h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .beyond-item p {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .conclusion-box {
+    background: linear-gradient(135deg, var(--color-bg-secondary), #1a1a24);
+    border: 1px solid var(--color-resistance-green);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .conclusion-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .conclusion-box p:first-child {
+    font-size: 1.15rem;
+    color: var(--color-text);
+  }
+
+  .conclusion-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Navigation */
+  .study-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ffffff10;
+  }
+
+  .study-nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid #ffffff10;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .study-nav a:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .nav-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+  }
+
+  .nav-title {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 0.25rem;
+  }
+
+  .nav-next {
+    text-align: right;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .context-cards,
+    .identity-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .beyond-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .choice-buttons {
+      flex-direction: column;
+    }
+
+    .flow-progress {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .study-nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-next {
+      text-align: left;
+    }
+  }
+</style>
+
+<script>
+  // Interactive Flowchart Logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const flowchart = document.getElementById('flowchart');
+    const progressSteps = document.querySelectorAll('.progress-step');
+
+    // State management
+    let currentNode = 'start';
+    const history: string[] = [];
+
+    // Show a specific node
+    function showNode(nodeId: string) {
+      // Hide all nodes
+      flowchart?.querySelectorAll('.flow-node').forEach(node => {
+        node.classList.remove('active');
+        node.classList.add('hidden');
+      });
+
+      // Show target node
+      const targetNode = document.getElementById(nodeId);
+      if (targetNode) {
+        targetNode.classList.remove('hidden');
+        // Trigger reflow for animation
+        void targetNode.offsetWidth;
+        targetNode.classList.add('active');
+      }
+
+      // Update progress
+      updateProgress(nodeId);
+
+      currentNode = nodeId;
+    }
+
+    // Update progress indicators
+    function updateProgress(nodeId: string) {
+      progressSteps.forEach(step => {
+        step.classList.remove('active', 'completed');
+      });
+
+      const stepMap: Record<string, number> = {
+        'start': 0,
+        'q1': 1,
+        'q2': 2,
+        'q3': 2,
+        'refusal': 3,
+        'withdrawal': 3,
+        'obfuscation': 3,
+        'intervention': 3,
+        'continue': 3
+      };
+
+      const currentIndex = stepMap[nodeId] || 0;
+
+      progressSteps.forEach((step, index) => {
+        if (index < currentIndex) {
+          step.classList.add('completed');
+        } else if (index === currentIndex) {
+          step.classList.add('active');
+        }
+      });
+    }
+
+    // Handle choice button clicks
+    flowchart?.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+
+      // Check if clicked element is a choice button or restart button
+      const choiceBtn = target.closest('.choice-btn') as HTMLElement;
+      const restartBtn = target.closest('.restart-btn') as HTMLElement;
+
+      if (choiceBtn) {
+        const targetNode = choiceBtn.dataset.target;
+        if (targetNode) {
+          history.push(currentNode);
+          showNode(targetNode);
+        }
+      }
+
+      if (restartBtn) {
+        history.length = 0;
+        showNode('start');
+      }
+    });
+
+    // Initialize: show start, then transition to q1
+    showNode('start');
+
+    // Auto-advance from start to first question after a delay
+    const startNode = document.getElementById('start');
+    startNode?.addEventListener('click', () => {
+      if (currentNode === 'start') {
+        history.push('start');
+        showNode('q1');
+      }
+    });
+
+    // Add click hint to start
+    if (startNode) {
+      const hint = document.createElement('p');
+      hint.className = 'start-hint';
+      hint.textContent = 'Click to begin';
+      hint.style.cssText = 'font-size: 0.85rem; color: var(--color-text-muted); margin-top: 1rem; opacity: 0.7;';
+      startNode.querySelector('.node-content')?.appendChild(hint);
+      startNode.style.cursor = 'pointer';
+    }
+  });
+</script>
