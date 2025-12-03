@@ -225,17 +225,17 @@ import Lightbox from '../../components/Lightbox.astro';
 
       <div class="transcend-grid">
         <div class="transcend-item">
-          <div class="transcend-icon">💉</div>
+          <div class="transcend-icon">01</div>
           <h4>Vaccine Hesitancy</h4>
           <p>Maternal protective instinct weaponized against childhood immunization</p>
         </div>
         <div class="transcend-item">
-          <div class="transcend-icon">🌡️</div>
+          <div class="transcend-icon">02</div>
           <h4>Climate Policy Resistance</h4>
           <p>Fear of economic harm to children deployed against environmental action</p>
         </div>
         <div class="transcend-item">
-          <div class="transcend-icon">📚</div>
+          <div class="transcend-icon">03</div>
           <h4>Educational Curriculum Battles</h4>
           <p>Parental authority invoked to override professional educators</p>
         </div>
@@ -716,8 +716,18 @@ import Lightbox from '../../components/Lightbox.astro';
   }
 
   .transcend-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-danger)20;
+    border: 1px solid var(--color-danger);
+    border-radius: 50%;
+    color: var(--color-danger);
+    margin: 0 auto 1rem;
   }
 
   .transcend-item h4 {
