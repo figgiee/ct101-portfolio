@@ -43,6 +43,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
     </section>
 
+    <section class="image-gallery">
+      <h2>Key Visual Artifacts</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img
+            src="/ct101-portfolio/images/depth-study/smiling-sun.png"
+            alt="The Smiling Sun anti-nuclear logo designed by Anne Lund in 1975, featuring a bright orange sun with a simple smiling face and the text 'Nuclear Power? No Thanks' arranged in a circle"
+          />
+          <figcaption>Anne Lund's "Smiling Sun" (1975) - The icon that shaped 50 years of nuclear perception</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="/ct101-portfolio/images/depth-study/gen-atomic-winner.jpg"
+            alt="First place winner from Generation Atomic's 2022 art contest, showing pro-nuclear advocacy artwork attempting to counter negative nuclear imagery"
+          />
+          <figcaption>Generation Atomic Art Contest Winner (2022) - Professional counter-campaign attempting to reclaim nuclear imagery</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="/ct101-portfolio/images/depth-study/women-strike-for-peace.jpg"
+            alt="Women Strike for Peace protesters marching with signs against nuclear weapons and nuclear power in the 1960s"
+          />
+          <figcaption>Women Strike for Peace (1960s) - Maternal mobilization against nuclear technology</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="/ct101-portfolio/images/depth-study/death-rates-comparison.png"
+            alt="Bar chart comparing death rates from different energy sources per terawatt-hour, showing nuclear has the lowest death rate compared to coal, oil, gas, and other sources"
+          />
+          <figcaption>Death rates per TWh by energy source - Data that cannot penetrate the visual landscape</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="study-section visual-analysis">
       <h2>Visual Rhetoric Analysis</h2>
 
@@ -223,6 +257,51 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin-top: 0.5rem;
+  }
+
+  /* Image Gallery */
+  .image-gallery {
+    margin: 4rem 0;
+  }
+
+  .image-gallery h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-nuclear-yellow);
+    display: inline-block;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gallery-item {
+    margin: 0;
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ffffff10;
+    transition: border-color 0.2s ease;
+  }
+
+  .gallery-item:hover {
+    border-color: var(--color-nuclear-yellow);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-item figcaption {
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
   }
 
   /* Sections */

@@ -31,6 +31,33 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p class="intro-explanation">These personas work together. The Cold War American created passive fear. The Concerned Parent activated it into political action. Understanding both reveals why America rejected nuclear energy while France embraced it.</p>
     </section>
 
+    <section class="image-gallery">
+      <h2>Visual Evidence</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img
+            src="/ct101-portfolio/images/persona/mushroom-cloud.jpg"
+            alt="Mushroom cloud from nuclear bomb explosion, the iconic image that fused nuclear weapons with all nuclear technology in American consciousness"
+          />
+          <figcaption>The mushroom cloud became the universal symbol of nuclear technology, erasing distinctions between energy and weapons</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="/ct101-portfolio/images/persona/duck-and-cover.jpg"
+            alt="School children hiding under desks during a duck and cover nuclear drill in the 1950s"
+          />
+          <figcaption>Duck and cover drills (1950s) - Classical conditioning at national scale, teaching children to associate "nuclear" with imminent death</figcaption>
+        </figure>
+        <figure class="gallery-item large">
+          <img
+            src="/ct101-portfolio/images/persona/france-nuclear.jpg"
+            alt="French nuclear power plant with cooling towers, representing France's successful 70% nuclear electricity generation"
+          />
+          <figcaption>French nuclear plant - France generates 70% of electricity from nuclear. No Cold War imagery fusion, no Concerned Parent archetype, different outcome</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="study-section">
       <h2>Psychology-Based Techniques</h2>
       <p>These personas were deliberately manufactured through coordinated psychology-based techniques borrowed from market research, deployed at national scale over decades.</p>
@@ -269,6 +296,59 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-size: 1.25rem;
     color: var(--color-text-muted);
     max-width: 700px;
+  }
+
+  /* Image Gallery */
+  .image-gallery {
+    margin: 4rem 0;
+  }
+
+  .image-gallery h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-danger);
+    display: inline-block;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gallery-item {
+    margin: 0;
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ffffff10;
+    transition: border-color 0.2s ease;
+  }
+
+  .gallery-item:hover {
+    border-color: var(--color-danger);
+  }
+
+  .gallery-item.large {
+    grid-column: span 2;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-item.large img {
+    height: 280px;
+  }
+
+  .gallery-item figcaption {
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
   }
 
   /* Two Layer Intro */
